@@ -9,5 +9,6 @@ import { Home } from './home/home';
   templateUrl: './app.html',
 })
 export class App {
+  testval: string = "testval";
   protected readonly title = signal('budgeting-app');
 }
