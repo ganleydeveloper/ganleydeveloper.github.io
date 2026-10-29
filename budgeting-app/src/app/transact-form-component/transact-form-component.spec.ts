@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Home } from './home';
+import { TransactFormComponent } from './transact-form-component';
 
-describe('Home', () => {
-  let component: Home;
-  let fixture: ComponentFixture<Home>;
+describe('TransactFormComponent', () => {
+  let component: TransactFormComponent;
+  let fixture: ComponentFixture<TransactFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Home],
+      imports: [TransactFormComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Home);
+    fixture = TestBed.createComponent(TransactFormComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -1,14 +1,23 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Home } from './home/home';
+import { ApiService } from './api-service';
+import { TransactFormComponent } from './transact-form-component/transact-form-component';
+// import { Home } from './home/home';
 
 @Component({
-  imports: [RouterOutlet, Home],
+  imports: [RouterOutlet, TransactFormComponent],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
-  testval: string = "testval";
+export class App implements OnInit {
   protected readonly title = signal('budgeting-app');
+  private apiService = inject(ApiService);
+
+  ngOnInit() {
+    this.apiService.getData().subscribe({
+      next: (data) => console.log(data),
+      error: (error) => console.error(error)
+    })
+  }
 }
