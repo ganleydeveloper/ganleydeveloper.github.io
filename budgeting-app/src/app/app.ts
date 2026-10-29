@@ -13,4 +13,5 @@ export class App {
   protected readonly title = signal('budgeting-app');
 
   // DEPLOY COMMAND: ng deploy --base-href=/ganleydeveloper.github.io/
+  // DEPLOYED URL: https://ganleydeveloper.github.io/
 }
