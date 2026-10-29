@@ -11,4 +11,6 @@ import { TransactFormComponent } from './transact-form-component/transact-form-c
 })
 export class App {
   protected readonly title = signal('budgeting-app');
+
+  // DEPLOY COMMAND: ng deploy --base-href=/ganleydeveloper.github.io/
 }
