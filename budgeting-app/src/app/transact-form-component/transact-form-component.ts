@@ -16,7 +16,7 @@ export class TransactFormComponent {
   categories: any;
 
   // Variable declarations
-  transact = new Transaction('', 0, formatDate(new Date(), 'MM/dd/yyyy', 'en-US'), '');
+  transact = new Transaction('', '', formatDate(new Date(), 'MM/dd/yyyy', 'en-US'), '');
 
   // Calls general Scripts GET request, which is keyed to Categories tab
   getCategories() {
@@ -52,9 +52,9 @@ export class TransactFormComponent {
     console.log(this.categories);
     console.log(this.transact);
     // Disabled actual data submission for testing purposes
-    /* this.apiService.postTransaction(this.transact).subscribe({
+    this.apiService.postTransaction(this.transact).subscribe({
       next: (data) => console.log(data),
       error: (error) => console.error(error)
-    }); */
+    }); 
   }
 }

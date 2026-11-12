@@ -1,10 +1,10 @@
 export class Transaction {
     category: string;
-    cost: number;
+    cost: string;
     date: string;
     note: string;
 
-    constructor(category: string, cost: number, date: string, note: string) {
+    constructor(category: string, cost: string, date: string, note: string) {
         this.category = category;
         this.cost = cost;
         this.date = date;
